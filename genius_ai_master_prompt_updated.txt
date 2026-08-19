@@ -1,0 +1,1364 @@
+MASTER PROMPT — BUILD GENIUS AI
+
+Act as a world-class software engineering team consisting of:
+
+- Senior AI engineer
+- Python developer
+- React/Next.js developer
+- Node.js developer
+- Streamlit developer
+- UI/UX designer
+- Full-stack engineer
+- Educational technology specialist
+- Search/research engineer
+- DevOps engineer
+- GitHub specialist
+- Cybersecurity engineer
+- Mobile web developer
+
+Build a complete, production-quality AI assistant called:
+
+==================================================
+                    GENIUS AI
+==================================================
+
+TAGLINE:
+"Learn. Research. Create. Achieve."
+
+DEVELOPER:
+Jerry Wanyonyi
+
+GENIUS AI should be a modern AI chatbot and learning assistant inspired by the best usability ideas from modern AI assistants such as ChatGPT, Claude, Grok, DeepSeek and Manus, but DO NOT copy their branding, copyrighted interface, proprietary code, logos, or exact visual design.
+
+Create an original, premium GENIUS AI identity.
+
+==================================================
+1. CORE OBJECTIVE
+==================================================
+
+Build GENIUS AI as a web-based AI assistant that:
+
+- Works on smartphones
+- Works on tablets
+- Works on Windows
+- Works on macOS
+- Works on Linux
+- Works in modern browsers
+- Can be hosted on GitHub
+- Can be deployed on Streamlit
+- Has a React/Node implementation
+- Can run locally
+- Can work without a paid API key
+- Can use local open-source AI models
+- Can use online sources when the user is connected to the internet
+- Can be used as a study assistant
+- Can answer questions
+- Can summarize documents
+- Can explain difficult topics
+- Can generate quizzes
+- Can help with coding
+- Can help with research
+- Can analyze uploaded documents
+- Can maintain conversation history
+- Has a beautiful modern GUI
+
+The application must NOT depend on OpenAI, Gemini, Claude, or another paid API for its basic operation.
+
+==================================================
+2. NO API KEY ARCHITECTURE
+==================================================
+
+This is extremely important.
+
+GENIUS AI must be designed so that the user does NOT need an API key.
+
+Implement multiple AI engines.
+
+ENGINE A — LOCAL AI
+
+Support local Ollama.
+
+Example:
+
+Ollama
+   ↓
+Local model
+   ↓
+GENIUS AI
+
+Support configurable models such as:
+
+- Llama
+- Qwen
+- DeepSeek
+- Mistral
+- Gemma
+
+Do not hard-code one model.
+
+Allow the user to select an installed model.
+
+Detect automatically whether Ollama is running.
+
+If Ollama is unavailable, display:
+
+"Local AI is currently unavailable."
+
+Provide instructions for starting Ollama.
+
+ENGINE B — ONLINE KEYLESS MODE
+
+When the user is online, GENIUS AI should have an optional online research/assistant layer that does not require a private paid API key.
+
+Use publicly accessible web resources where legally and technically permitted.
+
+The system should distinguish:
+
+LOCAL AI
+ONLINE INFORMATION
+BUILT-IN TOOLS
+
+Do not pretend that a public web endpoint is equivalent to a guaranteed commercial AI API.
+
+If the online service is unavailable, automatically fall back to local AI.
+
+ENGINE C — OFFLINE FALLBACK
+
+If there is no internet and Ollama is unavailable:
+
+GENIUS AI should still provide:
+
+- Basic study tools
+- Calculations
+- Note formatting
+- Flashcards
+- Quiz generation from supplied text
+- Document organization
+- Built-in educational explanations where possible
+
+The application should never simply crash.
+
+==================================================
+3. AI ROUTER
+==================================================
+
+Create an intelligent AI routing system:
+
+USER
+ ↓
+GENIUS AI ROUTER
+ ↓
+Is local Ollama available?
+ ├── YES → Local AI
+ └── NO
+       ↓
+Is internet available?
+ ├── YES → Online information/AI layer
+ └── NO → Built-in tools/fallback
+
+The router should show the user which engine is being used.
+
+Example:
+
+"GENIUS AI • Local Ollama"
+
+or
+
+"GENIUS AI • Online Research"
+
+or
+
+"GENIUS AI • Offline Tools"
+
+==================================================
+4. STUDY MODE
+==================================================
+
+This should be one of GENIUS AI's strongest features.
+
+Create:
+
+STUDY MODE
+
+Allow students to:
+
+- Ask questions
+- Upload notes
+- Paste notes
+- Upload PDF
+- Upload TXT
+- Upload DOCX where practical
+- Generate summaries
+- Generate revision notes
+- Generate flashcards
+- Generate quizzes
+- Generate multiple-choice questions
+- Generate short-answer questions
+- Generate exam questions
+- Generate model answers
+- Explain answers
+- Create study timetables
+- Create revision plans
+- Track study progress
+
+Example:
+
+USER:
+"Teach me the OSI model."
+
+GENIUS AI:
+
+1. Simple explanation
+2. Seven layers
+3. Real-world example
+4. Memory trick
+5. Diagram
+6. Exam questions
+7. Quiz
+
+Use simple English when the user requests beginner explanations.
+
+==================================================
+5. STUDY DASHBOARD
+==================================================
+
+Create a dashboard showing:
+
+- Subjects
+- Topics
+- Study sessions
+- Quiz scores
+- Progress
+- Revision schedule
+- Weak topics
+- Completed topics
+
+Allow students to create subjects such as:
+
+ICT
+Programming
+Database
+Networking
+Mathematics
+Business
+Communication
+Computer Security
+Operating Systems
+
+Allow custom subjects.
+
+==================================================
+6. DOCUMENT AI
+==================================================
+
+Allow users to upload documents.
+
+Support where practical:
+
+- PDF
+- DOCX
+- TXT
+- CSV
+- Images
+
+The system should allow:
+
+"Summarize this document."
+
+"Explain this document."
+
+"Create exam questions from this document."
+
+"Extract important points."
+
+"Create flashcards."
+
+"Find important definitions."
+
+"Create revision notes."
+
+Use local processing whenever possible.
+
+Do not upload private documents unnecessarily.
+
+==================================================
+7. RESEARCH MODE
+==================================================
+
+Create:
+
+RESEARCH MODE
+
+When the user is online:
+
+- Search the web where permitted
+- Collect relevant information
+- Compare sources
+- Summarize findings
+- Clearly distinguish facts from assumptions
+- Provide source names/links
+- Avoid fabricated citations
+
+Show:
+
+SOURCE
+DATE
+TITLE
+RELEVANCE
+
+Never fabricate a source.
+
+If web access is unavailable, clearly say:
+
+"GENIUS AI cannot access live web information right now."
+
+==================================================
+8. DEEP RESEARCH WORKFLOW
+==================================================
+
+Create an optional research workflow:
+
+USER QUESTION
+ ↓
+PLAN RESEARCH
+ ↓
+SEARCH SOURCES
+ ↓
+COLLECT INFORMATION
+ ↓
+COMPARE SOURCES
+ ↓
+ANALYZE
+ ↓
+GENERATE REPORT
+ ↓
+SHOW SOURCES
+
+Allow the user to stop/cancel a long research task.
+
+==================================================
+9. MANUS-LIKE TASK MODE
+==================================================
+
+Create:
+
+TASK MODE
+
+The user can write:
+
+"Create a business proposal for my bakery."
+
+GENIUS AI should:
+
+1. Understand the task.
+2. Break it into subtasks.
+3. Show the plan.
+4. Execute safe subtasks.
+5. Produce the result.
+6. Allow the user to review it.
+
+Display:
+
+TASK PLAN
+
+✓ Understand request
+✓ Research
+✓ Draft
+✓ Review
+✓ Finalize
+
+Do NOT automatically perform dangerous actions.
+
+For actions involving:
+
+- deleting files
+- changing system settings
+- sending emails
+- publishing content
+- changing accounts
+- installing software
+
+ask the user for confirmation first.
+
+==================================================
+10. CHAT INTERFACE
+==================================================
+
+Create a premium AI chat interface.
+
+The interface should include:
+
+- New chat
+- Chat history
+- Search conversations
+- Rename conversation
+- Delete conversation
+- Export conversation
+- Copy response
+- Regenerate response
+- Edit user message
+- Continue response
+- Stop generation
+
+Chat bubbles should look modern and clean.
+
+Use Markdown.
+
+Support:
+
+- Code blocks
+- Tables
+- Lists
+- Headings
+- Mathematical expressions
+- Images where appropriate
+- Links
+- Citations in research mode
+
+==================================================
+11. CHATGPT-STYLE COMPOSER
+==================================================
+
+Create a large modern message composer.
+
+Include:
+
+[ + ] Attach
+[ 🎤 ] Voice
+[ 📎 ] Files
+[ 🧠 ] Mode
+[ Send ]
+
+Support:
+
+- Text
+- File upload
+- Voice input
+- Images
+- Drag and drop
+
+The send button should become active when there is content.
+
+==================================================
+12. VOICE AI
+==================================================
+
+Add voice functionality.
+
+Allow users to:
+
+- Speak to GENIUS AI
+- Convert speech to text
+- Read AI responses aloud
+
+Support:
+
+English
+Kiswahili
+
+Use browser speech APIs or open-source solutions where practical.
+
+Do not require a paid speech API.
+
+==================================================
+13. IMAGE UNDERSTANDING
+==================================================
+
+Allow users to upload an image.
+
+Examples:
+
+- Photograph
+- Diagram
+- Screenshot
+- Homework
+- Handwritten notes
+- Technical drawing
+
+Allow:
+
+"Explain this image."
+
+"Extract the text."
+
+"Explain this diagram."
+
+"Turn this into study notes."
+
+Use local vision models where available.
+
+If the selected local model does not support vision, clearly inform the user.
+
+==================================================
+14. CODING ASSISTANT
+==================================================
+
+Create:
+
+CODE MODE
+
+Support:
+
+- Python
+- JavaScript
+- React
+- Node.js
+- HTML
+- CSS
+- PHP
+- SQL
+- Java
+- C++
+- C#
+- Bash
+- PowerShell
+
+Allow:
+
+- Explain code
+- Debug code
+- Improve code
+- Generate code
+- Refactor
+- Find errors
+- Generate documentation
+
+Use syntax highlighting.
+
+==================================================
+15. FILE GENERATION
+==================================================
+
+Allow GENIUS AI to generate:
+
+- TXT
+- Markdown
+- CSV
+- PDF
+- DOCX
+- JSON
+- HTML
+- Code files
+
+Where appropriate.
+
+Provide:
+
+DOWNLOAD
+COPY
+SAVE
+
+buttons.
+
+==================================================
+16. PROJECT WORKSPACE
+==================================================
+
+Create:
+
+GENIUS WORKSPACE
+
+Users can create projects.
+
+Example:
+
+"My Library Management System"
+
+Inside a project:
+
+- Chat
+- Files
+- Notes
+- Tasks
+- Generated documents
+- Code
+- Research
+- History
+
+Allow users to return to projects later.
+
+==================================================
+17. MEMORY
+==================================================
+
+Create optional user memory.
+
+Allow the user to control memory.
+
+Settings:
+
+Memory ON
+Memory OFF
+Clear memory
+
+Never secretly store sensitive information.
+
+Show users what has been saved.
+
+==================================================
+18. PERSONALIZATION
+==================================================
+
+Allow users to choose:
+
+- Name
+- Language
+- Theme
+- Response style
+- Study level
+
+Response styles:
+
+- Simple
+- Professional
+- Detailed
+- Teacher
+- Developer
+- Researcher
+
+==================================================
+19. MODERN GUI
+==================================================
+
+Make the GUI premium.
+
+Use:
+
+- Glassmorphism
+- Dark mode
+- Light mode
+- Subtle gradients
+- Modern cards
+- Soft shadows
+- Smooth animations
+- Responsive design
+- Minimal interface
+- Excellent typography
+
+Do NOT make it visually cluttered.
+
+Design philosophy:
+
+"Simple enough for a student.
+Powerful enough for a professional."
+
+==================================================
+20. MOBILE DESIGN
+==================================================
+
+The application must be mobile-first.
+
+Test layouts for:
+
+320px
+375px
+390px
+414px
+768px
+1024px
+1440px
+
+On smartphones:
+
+- Sidebar becomes a drawer
+- Chat occupies full width
+- Composer stays easy to access
+- Buttons are touch-friendly
+- File uploads work
+- Voice input works
+- Documents can be downloaded
+
+==================================================
+21. REACT/NODE VERSION
+==================================================
+
+Create a modern React/Node implementation.
+
+Preferred architecture:
+
+Frontend:
+
+React
+Vite
+Tailwind CSS
+
+Backend:
+
+Node.js
+Express
+
+AI layer:
+
+Local Ollama integration
+
+Structure:
+
+genius-ai/
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   └── services/
+│
+├── backend/
+│   ├── server.js
+│   ├── routes/
+│   ├── services/
+│   └── utils/
+│
+├── streamlit/
+│   └── app.py
+│
+├── shared/
+│
+├── requirements.txt
+├── package.json
+├── README.md
+└── .gitignore
+
+==================================================
+22. STREAMLIT VERSION
+==================================================
+
+Create a fully functional Streamlit version.
+
+Entry point:
+
+streamlit/app.py
+
+It should provide the core features:
+
+- Chat
+- Study mode
+- Document upload
+- AI model selection
+- Ollama integration
+- Online research where practical
+- Voice input
+- Settings
+- Download/export
+
+==================================================
+23. GITHUB STRUCTURE
+==================================================
+
+Create a professional GitHub-ready repository:
+
+genius-ai/
+
+README.md
+
+LICENSE
+
+.gitignore
+
+requirements.txt
+
+package.json
+
+frontend/
+
+backend/
+
+streamlit/
+
+docs/
+
+assets/
+
+tests/
+
+scripts/
+
+config/
+
+==================================================
+24. CONFIGURATION
+==================================================
+
+Never hard-code secrets.
+
+Use:
+
+.env.example
+
+Streamlit secrets where needed.
+
+The basic application must work without API keys.
+
+Example:
+
+OLLAMA_URL=http://127.0.0.1:11434
+
+Do NOT place real API keys in GitHub.
+
+==================================================
+25. STREAMLIT CLOUD LIMITATIONS
+==================================================
+
+Be realistic.
+
+The Streamlit version must not depend on a local Ollama installation being available on Streamlit Cloud.
+
+Explain:
+
+LOCAL MODE:
+Ollama runs on the user's computer.
+
+CLOUD MODE:
+Use only features compatible with the cloud environment.
+
+Do not falsely claim that Streamlit Cloud can run an arbitrary large local LLM.
+
+Create graceful warnings when a feature is unavailable.
+
+==================================================
+26. SETTINGS
+==================================================
+
+Create settings for:
+
+AI Engine
+Model
+Language
+Theme
+Font size
+Response style
+Memory
+Voice
+Study mode
+Privacy
+Data storage
+
+==================================================
+27. PRIVACY
+==================================================
+
+Create a privacy-first architecture.
+
+Do not permanently store:
+
+- User conversations
+- Uploaded documents
+- Audio
+- Images
+
+unless the user explicitly enables storage.
+
+Provide:
+
+CLEAR CHAT
+CLEAR HISTORY
+DELETE FILE
+DELETE MEMORY
+
+==================================================
+28. SECURITY
+==================================================
+
+Implement:
+
+- Input validation
+- File-size limits
+- Allowed file extensions
+- Safe temporary files
+- No exposed secrets
+- Secure HTTP requests
+- Basic rate limiting where applicable
+- Safe subprocess handling
+- No arbitrary shell execution from user messages
+
+If adding code execution, isolate it and keep it disabled by default.
+
+==================================================
+29. PERFORMANCE
+==================================================
+
+Optimize for low-resource computers.
+
+Use:
+
+- Lazy loading
+- Caching
+- Streaming responses
+- Async operations where appropriate
+- Efficient file processing
+
+Do not load a huge model automatically.
+
+==================================================
+30. ERROR HANDLING
+==================================================
+
+Never show raw Python errors to normal users.
+
+Instead:
+
+"GENIUS AI could not connect to the selected AI engine."
+
+Then provide:
+
+CHECK CONNECTION
+TRY AGAIN
+OPEN SETTINGS
+
+Developer logs may contain technical details.
+
+==================================================
+31. BRANDING
+==================================================
+
+Application name:
+
+GENIUS AI
+
+Developer:
+
+Jerry Wanyonyi
+
+Use an original AI logo.
+
+Create a professional logo concept using:
+
+G
+AI neural pattern
+Subtle glow
+
+Do not use logos belonging to ChatGPT, Grok, DeepSeek, Manus, Google, OpenAI or other companies.
+
+==================================================
+32. HOME PAGE
+==================================================
+
+Create a beautiful landing/dashboard page:
+
+GENIUS AI
+
+"Your intelligent study, research and productivity companion."
+
+Buttons:
+
+START CHAT
+
+STUDY WITH AI
+
+RESEARCH
+
+UPLOAD DOCUMENT
+
+BUILD A PROJECT
+
+VOICE CHAT
+
+==================================================
+33. STUDY TOOLS
+==================================================
+
+Add dedicated buttons:
+
+EXPLAIN TOPIC
+SUMMARIZE
+MAKE FLASHCARDS
+CREATE QUIZ
+MAKE REVISION NOTES
+CREATE EXAM
+MARK MY ANSWERS
+CREATE STUDY PLAN
+SIMPLIFY THIS
+TRANSLATE
+DEFINE TERM
+
+==================================================
+34. CHAT COMMANDS
+==================================================
+
+Support natural commands such as:
+
+"Explain TCP/IP like I'm 10."
+
+"Create KNEC revision questions."
+
+"Summarize this PDF."
+
+"Teach me Python."
+
+"Create a 7-day study timetable."
+
+"Debug this code."
+
+"Research this topic."
+
+"Compare these two documents."
+
+"Create a professional report."
+
+==================================================
+35. EDUCATIONAL SAFETY
+==================================================
+
+GENIUS AI should help users learn rather than simply encouraging copying.
+
+For homework:
+
+Explain the concept first.
+
+Then provide:
+
+- Worked example
+- Similar practice question
+- Model answer where appropriate
+
+==================================================
+36. LANGUAGE SUPPORT
+==================================================
+
+At minimum support:
+
+English
+Kiswahili
+
+Design the architecture so additional languages can be added later.
+
+==================================================
+37. TESTING
+==================================================
+
+Create tests for:
+
+- Chat
+- AI routing
+- Ollama connection
+- File upload
+- PDF processing
+- Study tools
+- Quiz generation
+- Export
+- Settings
+- Mobile layout where practical
+
+Run tests before final delivery.
+
+Fix:
+
+- Import errors
+- Broken routes
+- Broken components
+- Missing dependencies
+- Invalid references
+- Build errors
+
+==================================================
+38. INSTALLATION
+==================================================
+
+The README must explain Windows installation.
+
+Example:
+
+python -m venv .venv
+
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+
+streamlit run streamlit/app.py
+
+For Node:
+
+npm install
+
+npm run dev
+
+For Ollama:
+
+Install Ollama separately.
+
+Then:
+
+ollama pull llama3.2
+
+ollama serve
+
+Document model alternatives.
+
+==================================================
+39. GITHUB DEPLOYMENT
+==================================================
+
+Provide exact Git commands:
+
+git init
+
+git add .
+
+git commit -m "Initial GENIUS AI release"
+
+git branch -M main
+
+git remote add origin YOUR_REPOSITORY_URL
+
+git push -u origin main
+
+==================================================
+40. STREAMLIT DEPLOYMENT
+==================================================
+
+Create complete instructions for:
+
+1. GitHub repository
+2. Streamlit Community Cloud
+3. Select repository
+4. Select branch
+5. Select streamlit/app.py
+6. Deploy
+
+Clearly document limitations of cloud mode.
+
+==================================================
+41. NODE/REACT DEPLOYMENT
+==================================================
+
+Provide deployment instructions for:
+
+Frontend
+Backend
+
+Use environment variables.
+
+Do not require paid APIs.
+
+==================================================
+42. README
+==================================================
+
+Create an excellent README.
+
+Include:
+
+GENIUS AI
+
+Features
+
+Architecture
+
+Screenshots
+
+Installation
+
+Ollama setup
+
+Local AI
+
+Online mode
+
+Streamlit deployment
+
+React deployment
+
+Node backend
+
+Mobile support
+
+Security
+
+Privacy
+
+Troubleshooting
+
+Roadmap
+
+Developer
+
+==================================================
+43. FUTURE ROADMAP
+==================================================
+
+Prepare architecture for future features:
+
+- Advanced RAG
+- Personal knowledge base
+- Long-term memory
+- Multi-agent research
+- Voice assistant
+- Local vision AI
+- Browser automation
+- Desktop application
+- Android application
+- iOS application
+- Plugin system
+- Calendar integration
+- Email integration
+- Cloud synchronization
+
+Do not implement dangerous automation by default.
+
+==================================================
+44. IMPORTANT IMPLEMENTATION RULE
+==================================================
+
+DO NOT just create a visual mockup.
+
+I want a REAL WORKING APPLICATION.
+
+Every major button should perform a real action.
+
+Do not leave:
+
+TODO
+
+pass
+
+Coming soon
+
+Not implemented
+
+fake chatbot responses
+
+unless a feature genuinely requires unavailable hardware/service.
+
+==================================================
+45. FINAL QUALITY STANDARD
+==================================================
+
+The final product should feel like a serious modern AI platform.
+
+It should be:
+
+Fast
+Beautiful
+Responsive
+Secure
+Modular
+Maintainable
+Open-source friendly
+Mobile friendly
+GitHub ready
+Streamlit ready
+React ready
+Node ready
+Ollama compatible
+No-paid-API-key friendly
+
+==================================================
+46. FINAL DELIVERABLES
+==================================================
+
+Return the complete project containing:
+
+1. Streamlit application
+2. React frontend
+3. Node.js backend
+4. AI router
+5. Ollama integration
+6. Study mode
+7. Research mode
+8. Document AI
+9. Voice input
+10. Chat history
+11. Project workspace
+12. File generation
+13. Modern GUI
+14. Mobile responsive design
+15. Settings
+16. Privacy controls
+17. Tests
+18. README
+19. requirements.txt
+20. package.json
+21. .env.example
+22. .gitignore
+23. LICENSE
+24. Deployment documentation
+
+==================================================
+47. INSTALLABLE APP EXPERIENCE
+==================================================
+
+The React/Vite version must also work as an installable Progressive Web App (PWA), while remaining fully usable as a normal website in supported modern browsers. Users must be able to install GENIUS AI as an app on Windows, macOS, Linux, Android, and iOS wherever the browser supports installation.
+
+PWA FOUNDATION
+
+Implement the following:
+
+- Provide a valid web app manifest with the name GENIUS AI, short name, description, start URL, standalone display mode, theme color, background color, and suitable 192x192 and 512x512 application icons.
+- Register a versioned service worker for the app shell, static assets, and an offline fallback page.
+- Do not cache private conversations, uploaded documents, audio, images, or other sensitive user data unless the user explicitly enables local storage.
+- Support secure HTTPS deployment in production and localhost development for testing.
+- Make the installed experience responsive, accessible, fast, and visually consistent with the browser version.
+
+USER-FRIENDLY INSTALL PROMPT
+
+When a user has started using GENIUS AI and the browser reports that installation is available, show a polite, non-blocking custom prompt such as:
+
+"Install GENIUS AI on your device for faster access and an app-like experience."
+
+The prompt must:
+
+1. Appear only after meaningful use or a short delay, not immediately on the first page load.
+2. Detect whether GENIUS AI is already installed or running in standalone mode and avoid showing the prompt in that case.
+3. Use the browser's supported installation event when available rather than displaying a misleading prompt.
+4. Include clear actions such as INSTALL NOW, NOT NOW, and DISMISS.
+5. Respect the user's choice, avoid repeatedly interrupting the user, and store dismissal state locally without storing private conversation content.
+6. Close automatically after installation or dismissal.
+7. Be keyboard accessible, screen-reader friendly, mobile responsive, and easy to understand.
+8. Never block chat, study, research, document, or other core functionality if the user declines installation.
+
+PLATFORM-SPECIFIC GUIDANCE
+
+- On supported Chromium-based desktop browsers, provide an in-app install button or banner when the browser exposes an install event. Also document the browser menu installation option.
+- On supported Android browsers, provide the same install flow and explain that GENIUS AI may be added to the home screen.
+- On iPhone and iPad browsers where an automatic installation event is unavailable, show optional instructions such as OPEN SHARE MENU → ADD TO HOME SCREEN. Do not pretend that an automatic prompt is available when it is not.
+- If installation is unavailable, do not show a broken button. Instead, hide the prompt or show a brief explanation in Help or Settings.
+
+STREAMLIT VERSION
+
+The Streamlit version should remain fully usable in a browser. Where automatic PWA installation is not available, provide a non-intrusive Help or Settings card explaining how the user can use the browser's Install or Add to Home Screen option when supported. Do not claim that every Streamlit deployment can be installed as a native desktop application.
+
+TESTING AND DOCUMENTATION
+
+Test and document:
+
+- First-time display of the install prompt after meaningful use.
+- Correct behavior when the app is already installed.
+- Installation acceptance and dismissal.
+- Reopening the app in standalone mode.
+- Desktop, Android, and iOS guidance.
+- Offline app-shell loading and graceful offline messaging.
+- Protection of private conversations and uploaded files from unintended service-worker caching.
+- Exact README steps for installing and uninstalling GENIUS AI as an app.
+
+Include the manifest, service worker, icons, install prompt component, browser detection logic, offline fallback, automated tests where practical, and README documentation in the final project.
+
+==================================================
+
+IMPORTANT:
+
+Do not use paid API keys as a requirement.
+
+The core application must work locally using Ollama.
+
+The cloud version must degrade gracefully when local AI is unavailable.
+
+Make the architecture clean enough that additional AI providers can be added later without rewriting the entire application.
+
+Before finishing, run the application, test the major workflows, fix errors, and provide exact commands for starting both the Streamlit and React/Node versions.
+
+==================================================
+FINAL PRODUCT
+==================================================
+
+Name:
+
+GENIUS AI
+
+Developer:
+
+Jerry Wanyonyi
+
+Tagline:
+
+"Learn. Research. Create. Achieve."
+
+Build it as a serious AI platform, not a simple chatbot demo.
