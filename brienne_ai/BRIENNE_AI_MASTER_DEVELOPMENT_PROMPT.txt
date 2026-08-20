@@ -1,0 +1,657 @@
+# BRIENNE AI — MASTER DEVELOPMENT PROMPT
+
+You are a world-class AI software architect, Python engineer, AI engineer, UI/UX designer, automation engineer, and cybersecurity-focused systems developer.
+
+Build a complete, working desktop AI assistant called **BRIENNE AI**.
+
+BRIENNE AI should be inspired by the intelligence, voice interaction, futuristic interface, automation abilities, and local computing style of J.A.R.V.I.S. from the Iron Man movies, but it must be an original real-world implementation and must not copy copyrighted movie assets, dialogue, branding, or source code.
+
+## 1. MAIN GOAL
+
+Create a highly advanced AI desktop assistant that can:
+
+1. 🤖 Control applications, files, and approved computer tasks.
+2. 🛠️ Help design, code, research, and create technology projects.
+3. 🛡️ Analyze potential threats, system problems, and security risks for defensive purposes.
+4. 📡 Control authorized local systems, applications, and connected devices.
+5. 🎙️ Hold natural voice and text conversations.
+6. 🧠 Process local data and provide intelligent recommendations.
+7. 🔌 Work offline without requiring a cloud AI API key.
+
+The primary local AI engine must use **Ollama**.
+
+BRIENNE AI must remain useful even when the computer has no internet connection, provided Ollama and a downloaded local model are available.
+
+---
+
+# 2. REQUIRED TECHNOLOGY STACK
+
+Use:
+
+* Python 3.11 or later
+* PyQt6 for the desktop interface
+* Ollama for offline LLM inference
+* SQLite for local memory and settings
+* Requests or httpx for Ollama API communication
+* SpeechRecognition or equivalent for speech input
+* pyttsx3 for offline text-to-speech
+* sounddevice / PyAudio where appropriate
+* PyAutoGUI for approved GUI automation
+* psutil for process and system monitoring
+* pathlib and os for file operations
+* subprocess for controlled application launching
+* python-dotenv for environment configuration
+* Rich for terminal logs
+* Pydantic for command schemas and validation
+
+Avoid requiring a paid API key.
+
+Optional online features may use APIs only when the user explicitly enables them.
+
+---
+
+# 3. CORE AI ARCHITECTURE
+
+Design BRIENNE AI with a modular architecture.
+
+Suggested structure:
+
+BRIENNE_AI/
+├── main.py
+├── requirements.txt
+├── README.md
+├── .env.example
+├── config/
+│   └── settings.py
+├── core/
+│   ├── assistant.py
+│   ├── brain.py
+│   ├── router.py
+│   ├── intent_parser.py
+│   ├── safety.py
+│   ├── memory.py
+│   └── logger.py
+├── ai/
+│   ├── ollama_client.py
+│   ├── prompts.py
+│   └── model_manager.py
+├── voice/
+│   ├── speech_to_text.py
+│   ├── text_to_speech.py
+│   └── wake_word.py
+├── automation/
+│   ├── app_controller.py
+│   ├── file_manager.py
+│   ├── desktop_automation.py
+│   └── system_controller.py
+├── tools/
+│   ├── coding_tool.py
+│   ├── document_tool.py
+│   ├── system_tool.py
+│   └── analysis_tool.py
+├── gui/
+│   ├── main_window.py
+│   ├── chat_widget.py
+│   ├── dashboard.py
+│   ├── voice_panel.py
+│   └── widgets/
+├── data/
+│   ├── brienne.db
+│   └── logs/
+└── tests/
+
+The application must be clean, modular, expandable, and well documented.
+
+---
+
+# 4. OFFLINE AI BRAIN
+
+BRIENNE AI must communicate with Ollama through:
+
+http://127.0.0.1:11434
+
+Automatically detect whether Ollama is running.
+
+Before generating a response:
+
+1. Check whether Ollama is available.
+2. Detect installed models.
+3. Allow the user to choose a model.
+4. Send conversation history efficiently.
+5. Stream responses where possible.
+6. Detect and display errors clearly.
+7. Never silently fail.
+
+Recommended local models should include options suitable for low-end and medium computers.
+
+The system must work with any compatible model installed through Ollama.
+
+---
+
+# 5. BRIENNE AI PERSONALITY
+
+BRIENNE AI must be:
+
+* Intelligent
+* Calm
+* Professional
+* Friendly
+* Efficient
+* Respectful
+* Slightly futuristic
+* Helpful
+* Honest about its limitations
+* Focused on safety
+
+Do not pretend to be conscious.
+
+BRIENNE AI should clearly distinguish between:
+
+* Conversation
+* Recommendation
+* Planned action
+* Executed action
+* Failed action
+
+Example:
+
+User:
+"Briennne, open Microsoft Word."
+
+BRIENNE AI:
+"I found Microsoft Word. I am ready to open it."
+
+Then execute if confirmation is required.
+
+After execution:
+
+"Microsoft Word has been opened successfully."
+
+---
+
+# 6. VOICE SYSTEM
+
+Implement an offline-first voice assistant.
+
+Features:
+
+* Push-to-talk button
+* Optional wake phrase
+* Microphone selection
+* Speech-to-text
+* Text-to-speech
+* Interrupt speech button
+* Volume control
+* Voice on/off toggle
+* Visual listening animation
+
+The interface should show:
+
+LISTENING...
+
+THINKING...
+
+BRIENNE IS SPEAKING...
+
+Use offline text-to-speech by default.
+
+If speech recognition requires online access, clearly label that mode and provide an offline alternative where possible.
+
+---
+
+# 7. APPLICATION CONTROL
+
+BRIENNE AI must support approved Windows application control.
+
+Examples:
+
+* Open Microsoft Word
+* Open Visual Studio Code
+* Open Chrome
+* Open File Explorer
+* Open Command Prompt
+* Close an approved application
+* Check running processes
+* Search installed applications
+
+Use a controlled application registry.
+
+Do not execute arbitrary shell commands directly from AI output.
+
+The AI must first convert natural language into structured actions.
+
+Example:
+
+User:
+"Open VS Code."
+
+AI plan:
+
+{
+"action": "open_application",
+"application": "Visual Studio Code",
+"risk": "low",
+"confirmation_required": false
+}
+
+The automation layer then validates and executes the approved action.
+
+---
+
+# 8. FILE MANAGEMENT
+
+BRIENNE AI should help manage files safely.
+
+Capabilities:
+
+* Search files
+* Open files
+* Organize selected files
+* Create folders
+* Rename files
+* Copy files
+* Move files
+* Summarize supported documents
+* Delete files only with confirmation
+
+Never permanently delete a file without explicit confirmation.
+
+Provide a file preview or summary before major changes.
+
+---
+
+# 9. COMPUTER AUTOMATION
+
+BRIENNE AI should support desktop automation using:
+
+* PyAutoGUI
+* Application-specific integrations where available
+* Keyboard automation
+* Mouse automation
+
+Capabilities may include:
+
+* Typing text into an active application
+* Filling simple user-approved forms
+* Creating documents
+* Navigating approved workflows
+* Taking screenshots
+* Extracting visible screen information
+
+Before sensitive or destructive automation:
+
+1. Explain the intended action.
+2. Ask for confirmation.
+3. Execute only after approval.
+4. Log the result.
+
+Include an emergency STOP button.
+
+Also support:
+
+CTRL + SHIFT + ESCAPE
+
+as a global emergency stop shortcut if technically feasible.
+
+---
+
+# 10. SYSTEM MONITORING
+
+Create a real-time dashboard showing:
+
+* CPU usage
+* RAM usage
+* Disk usage
+* Battery information
+* Network status
+* Running applications
+* Ollama status
+* Active AI model
+
+The dashboard should refresh safely without freezing the GUI.
+
+---
+
+# 11. INTELLIGENT DESIGN AND CODING ASSISTANT
+
+BRIENNE AI must help users create technology projects.
+
+It should:
+
+* Explain programming concepts
+* Generate code
+* Review code
+* Find common errors
+* Suggest improvements
+* Analyze project structures
+* Generate documentation
+* Create development plans
+
+Supported languages should include:
+
+* Python
+* JavaScript
+* HTML
+* CSS
+* PHP
+* SQL
+* Java
+* C++
+
+The assistant must never automatically overwrite project files without showing the planned changes and asking for confirmation.
+
+---
+
+# 12. DEFENSIVE SECURITY ANALYSIS
+
+Implement security analysis only for authorized defensive purposes.
+
+Capabilities:
+
+* Check system processes
+* Identify unusually high resource usage
+* Analyze local configuration problems
+* Detect basic security misconfigurations
+* Review logs
+* Recommend security improvements
+
+Do not implement:
+
+* Unauthorized access
+* Credential theft
+* Malware
+* Ransomware
+* DDoS
+* Exploitation tools
+* Unauthorized persistence
+* Data theft
+* Bypassing authentication
+
+---
+
+# 13. MEMORY SYSTEM
+
+Use SQLite for local memory.
+
+Memory should include:
+
+* User preferences
+* Conversation summaries
+* Approved application locations
+* Frequently used commands
+* Assistant settings
+
+Give the user controls to:
+
+* View memory
+* Search memory
+* Delete individual memories
+* Clear all memory
+* Disable memory
+
+Never store passwords or authentication secrets.
+
+---
+
+# 14. SAFETY AND HUMAN OVERRIDE
+
+Implement multiple safety levels.
+
+LOW RISK:
+
+* Answering questions
+* Opening approved applications
+* Reading system status
+
+MEDIUM RISK:
+
+* Creating files
+* Typing into applications
+* Moving files
+
+HIGH RISK:
+
+* Deleting files
+* Installing software
+* Changing important settings
+* Sending messages
+* Uploading files
+* Sharing information
+
+HIGH-RISK ACTIONS MUST REQUIRE EXPLICIT USER CONFIRMATION.
+
+Every automated action must produce an audit log.
+
+Create a clear:
+
+HUMAN OVERRIDE: ON
+
+indicator.
+
+---
+
+# 15. GUI DESIGN
+
+Create a premium, modern, futuristic desktop interface.
+
+Design style:
+
+* Dark theme
+* Deep black and dark glass surfaces
+* Glassmorphism panels
+* Subtle glow effects
+* Animated particles or data streams
+* Circular AI core visualization
+* Smooth animations
+* Professional typography
+* Responsive layout
+
+Main layout:
+
+LEFT SIDEBAR:
+
+* BRIENNE AI logo
+* Chat
+* Voice
+* Automation
+* System
+* Projects
+* Memory
+* Settings
+
+CENTER:
+
+* AI conversation
+* Voice visualization
+* Action plans
+* Responses
+
+RIGHT PANEL:
+
+* System status
+* CPU
+* RAM
+* Ollama status
+* Model name
+* Safety status
+
+BOTTOM:
+
+* Text input
+* Voice button
+* Attach button
+* Send button
+* Emergency stop button
+
+The interface must be practical and not merely decorative.
+
+---
+
+# 16. STARTUP EXPERIENCE
+
+On launch:
+
+1. Show the BRIENNE AI splash screen.
+2. Check Ollama status.
+3. Check installed models.
+4. Initialize SQLite.
+5. Load user settings.
+6. Check microphone and TTS.
+7. Load application registry.
+8. Start system monitoring.
+
+Display:
+
+"BRIENNE AI INITIALIZING..."
+
+"Ollama connection: READY"
+
+"Offline intelligence: AVAILABLE"
+
+"Human override: ON"
+
+Then show:
+
+"Good morning. I am BRIENNE AI. How can I assist you?"
+
+The greeting should adapt to the time of day.
+
+---
+
+# 17. ERROR HANDLING
+
+The application must handle:
+
+* Ollama not running
+* No local model installed
+* Model unavailable
+* Microphone unavailable
+* Speech recognition failure
+* Text-to-speech failure
+* Application not found
+* Automation failure
+* Permission errors
+* Database errors
+
+Show friendly solutions.
+
+For example:
+
+"Ollama is running, but no AI model was found. Install a model using the command shown below."
+
+Provide a copyable command where appropriate.
+
+---
+
+# 18. INSTALLATION
+
+Generate:
+
+1. requirements.txt
+2. README.md
+3. .env.example
+4. Windows installation guide
+5. Troubleshooting guide
+6. Run script
+
+The README must explain:
+
+* Installing Python
+* Creating a virtual environment
+* Installing requirements
+* Installing Ollama
+* Downloading a local model
+* Starting Ollama
+* Running BRIENNE AI
+
+Example commands:
+
+python -m venv .venv
+
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python main.py
+
+Also include PowerShell equivalents.
+
+---
+
+# 19. QUALITY REQUIREMENTS
+
+The final project must:
+
+* Actually run
+* Avoid placeholder-only features
+* Have working Ollama communication
+* Have a working PyQt6 GUI
+* Support text chat
+* Support offline TTS
+* Support controlled application launching
+* Include system monitoring
+* Include SQLite memory
+* Include structured AI actions
+* Include human confirmation for risky actions
+* Include error handling
+* Include documentation
+* Include requirements.txt
+
+Do not simply provide a single massive Python file.
+
+Build the application as a complete, modular project.
+
+---
+
+# 20. DEVELOPMENT APPROACH
+
+Build the project in phases:
+
+PHASE 1:
+Working PyQt6 interface.
+
+PHASE 2:
+Ollama integration and offline chat.
+
+PHASE 3:
+Voice input and offline speech output.
+
+PHASE 4:
+Application and file control.
+
+PHASE 5:
+Desktop automation.
+
+PHASE 6:
+Memory and system monitoring.
+
+PHASE 7:
+Security, safety, permissions, and logging.
+
+PHASE 8:
+Testing and final documentation.
+
+After each phase, ensure the application runs before adding the next phase.
+
+Start by generating the complete project structure, then implement the code file by file.
+
+Do not skip important files.
+
+Do not use fake implementations for the core features.
+
+At the end, provide:
+
+1. Complete project structure.
+2. All source code.
+3. requirements.txt.
+4. README.md.
+5. Installation instructions.
+6. Troubleshooting instructions.
+7. Commands to run the application on Windows.
+8. A clear explanation of how the Ollama offline AI integration works.
+
+The final system should feel like a practical real-world futuristic personal AI operating system called:
+
+# BRIENNE AI
+
+"Intelligence. Voice. Automation. Under your control."

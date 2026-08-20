@@ -1,0 +1,47 @@
+# BRIENNE AI requirements
+# Python 3.11+ is recommended.
+# Install with: python -m pip install -r requirements.txt
+
+# Desktop GUI
+PyQt6>=6.7,<7
+
+# Local Ollama communication and configuration
+requests>=2.32,<3
+python-dotenv>=1.0,<2
+
+# Structured command validation and terminal logging
+pydantic>=2.8,<3
+rich>=13.7,<15
+
+# Voice input and offline text-to-speech
+SpeechRecognition>=3.10,<4
+pyttsx3>=2.90,<3
+sounddevice>=0.4.7,<1
+numpy>=1.26,<3
+
+# Optional local speech-recognition backend. A separate Vosk model must be
+# downloaded and configured by the application; the Python package alone is
+# not a speech model.
+vosk>=0.3.45,<1
+
+# Windows microphone backend used by SpeechRecognition when applicable.
+PyAudio>=0.2.14; platform_system == "Windows"
+
+# Approved desktop automation and system monitoring
+PyAutoGUI>=0.9.54,<1
+psutil>=6.0,<8
+
+# Optional Windows helpers for application-window inspection and controlled
+# desktop workflows. The core application should degrade gracefully if these
+# helpers are unavailable.
+PyGetWindow>=0.0.9; platform_system == "Windows"
+pywin32>=306; platform_system == "Windows"
+
+# Common local document readers used by document-summary features
+pypdf>=5.0,<7
+python-docx>=1.1,<2
+openpyxl>=3.1,<4
+
+# Testing and quality checks
+pytest>=8.3,<9
+pytest-qt>=4.4,<5

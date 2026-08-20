@@ -27,6 +27,19 @@ The master prompt describes a local-first, no-paid-API-key-required architecture
 
 This repository contains specifications and implementation guidance. It is not itself the complete GENIUS AI application source code.
 
+## BRIENNE AI package and Streamlit preview
+
+This repository also stores the complete BRIENNE AI documentation and project specification in [`brienne_ai/`](brienne_ai/). The package includes the Windows installation guide, user manual, troubleshooting guide, environment template, launcher scripts, dependency file, and the original supplied master development prompt.
+
+The documentation preview is available through [`brienne_streamlit_app.py`](brienne_streamlit_app.py). Run it locally with:
+
+```powershell
+python -m pip install -r requirements.txt
+streamlit run brienne_streamlit_app.py
+```
+
+For online preview and deployment instructions, read [`brienne_ai/STREAMLIT_DEPLOYMENT_GUIDE.md`](brienne_ai/STREAMLIT_DEPLOYMENT_GUIDE.md). The online Streamlit page previews the documentation; the full PyQt6/Ollama desktop assistant remains a local installation because a hosted Streamlit server cannot access Ollama or Windows automation on the user's computer.
+
 ## License
 
 No license has been selected yet. Add a license before redistributing the specification or using it as the basis for a public software project.
