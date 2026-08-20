@@ -1,0 +1,21 @@
+# BRIENNE AI Chat Upgrade
+
+- [x] Upgrade the landing-page project with secure server-side AI capabilities.
+- [x] Review the AI model integration requirements and full-stack project conventions.
+- [x] Add a server endpoint for conversational AI responses with input boundaries.
+- [x] Build the responsive ChatGPT-style BRIENNE conversation interface.
+- [x] Add clearly labelled current-information search handling and source boundaries.
+- [x] Test normal, error, loading, mobile, and safety-notice states.
+- [x] Save a verified checkpoint and deliver the upgrade.
+- [x] Define the animated background behavior and browser voice boundaries.
+- [x] Build the motion layer with reduced-motion support.
+- [x] Add functional voice input, speech output, browser permission handling, and visible status feedback.
+- [x] Test voice controls, animation fallbacks, and responsive layouts.
+- [ ] Synchronize the updated BRIENNE AI source files to the GitHub repository.
+- [ ] Save a verified checkpoint and deliver the motion and voice upgrade.
+- [x] Define a secure, per-user conversation and message persistence schema.
+- [x] Apply the database migration and add database access helpers.
+- [x] Add authenticated history, load, and delete procedures for persisted conversations.
+- [x] Connect saved histories to the BRIENNE AI chat interface with account-aware states.
+- [x] Test database authorization, persistence, loading, and deletion behavior.
+- [x] Save a verified checkpoint and deliver the persistent-data upgrade.

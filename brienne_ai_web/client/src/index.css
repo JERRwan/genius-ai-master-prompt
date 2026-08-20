@@ -1,0 +1,151 @@
+/* BRIENNE AI — Field Instrument global style sheet.
+   Naval ink, mineral ivory, and Approval Orange form the complete visual language.
+   Motion is constrained to opacity and transforms to keep the product calm and deliberate. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: "Space Grotesk", sans-serif;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: oklch(0.11 0.02 258);
+  --foreground: oklch(0.95 0.01 87);
+  --card: oklch(0.16 0.025 258);
+  --card-foreground: oklch(0.95 0.01 87);
+  --popover: oklch(0.14 0.023 258);
+  --popover-foreground: oklch(0.95 0.01 87);
+  --primary: oklch(0.68 0.19 34);
+  --primary-foreground: oklch(0.13 0.02 258);
+  --secondary: oklch(0.21 0.025 258);
+  --secondary-foreground: oklch(0.95 0.01 87);
+  --muted: oklch(0.22 0.02 258);
+  --muted-foreground: oklch(0.73 0.028 252);
+  --accent: oklch(0.23 0.025 258);
+  --accent-foreground: oklch(0.95 0.01 87);
+  --destructive: oklch(0.65 0.2 29);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.35 0.02 258);
+  --input: oklch(0.25 0.02 258);
+  --ring: oklch(0.68 0.19 34);
+}
+
+* { border-color: var(--border); }
+
+html { scroll-behavior: smooth; background: #08101e; }
+
+body {
+  min-width: 320px;
+  background: #08101e;
+  color: #f4f1e9;
+  font-family: "Space Grotesk", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button, a { transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
+button:active { transform: scale(0.97); }
+
+.brienne-ambient-field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+.brienne-ambient-grid {
+  position: absolute;
+  inset: -20%;
+  opacity: 0.22;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H52M0 0V52' fill='none' stroke='%239eb8d1' stroke-opacity='.22'/%3E%3C/svg%3E");
+}
+
+.brienne-orbit {
+  position: absolute;
+  width: min(78vw, 980px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(110, 215, 195, 0.16);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 24px rgba(110, 215, 195, 0.1));
+}
+
+.brienne-orbit-one { right: -25%; top: 8%; }
+.brienne-orbit-two { right: 18%; top: 46%; width: min(42vw, 520px); border-color: rgba(255, 107, 61, 0.18); }
+
+.brienne-signal-path {
+  position: absolute;
+  height: 1px;
+  width: 58%;
+  background: rgba(110, 215, 195, 0.58);
+  box-shadow: 0 0 18px rgba(110, 215, 195, 0.22);
+  transform-origin: left center;
+}
+
+.brienne-signal-path-one { left: -8%; top: 29%; transform: rotate(-13deg); }
+.brienne-signal-path-two { right: -12%; top: 66%; width: 45%; background: rgba(255, 107, 61, 0.5); box-shadow: 0 0 18px rgba(255, 107, 61, 0.22); transform: rotate(20deg); }
+
+.brienne-scanline {
+  position: absolute;
+  inset: -20% 0 auto;
+  height: 24%;
+  border-top: 1px solid rgba(110, 215, 195, 0.16);
+  border-bottom: 1px solid rgba(110, 215, 195, 0.06);
+  background: rgba(110, 215, 195, 0.018);
+  mix-blend-mode: screen;
+}
+
+.brienne-field-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(72px);
+  opacity: 0.2;
+}
+
+.brienne-field-glow-one { right: 7%; top: 13%; width: 16rem; height: 16rem; background: #247f8f; }
+.brienne-field-glow-two { left: 8%; bottom: 12%; width: 11rem; height: 11rem; background: #d75c3b; opacity: 0.11; }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes brienne-drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+  .brienne-drift { animation: brienne-drift 7s ease-in-out infinite; }
+  @keyframes brienne-orbit-sweep { 0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.45; } 50% { transform: rotate(18deg) scale(1.04); opacity: 0.8; } }
+  @keyframes brienne-orbit-counter { 0%, 100% { transform: rotate(0deg); opacity: 0.38; } 50% { transform: rotate(-24deg); opacity: 0.7; } }
+  @keyframes brienne-scan { 0% { transform: translateY(-10%); opacity: 0; } 14% { opacity: 1; } 84% { opacity: 0.7; } 100% { transform: translateY(500%); opacity: 0; } }
+  @keyframes brienne-signal-pulse { 0%, 100% { opacity: 0.24; } 50% { opacity: 0.92; } }
+  .brienne-orbit-one { animation: brienne-orbit-sweep 22s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
+  .brienne-orbit-two { animation: brienne-orbit-counter 27s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
+  .brienne-scanline { animation: brienne-scan 14s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
+  .brienne-signal-path { animation: brienne-signal-pulse 6s ease-in-out infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
